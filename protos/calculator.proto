@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package calculator;
+
+// The Calculator service definition.
+service Calculator {
+  // Performs the sum
+  rpc Sum (SumRequest) returns (Result) {}
+}
+
+// SumRequest will store 2 values in value1 and value2
+message SumRequest {
+  float value1 = 1;
+  float value2 = 2;
+}
+
+// Result will store result of addition in value
+message Result {
+    float value = 1;
+}

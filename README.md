@@ -7,16 +7,16 @@ Create a simple Calculator with add(x, y) function as gRPC server and provide a 
 ## Solution
 ### Setting up the environment
 ```sh
-$ # Create virtual environment for the lab.
-$ python3 -m venv lab2-venv
-$ # activate the environment
-$ source lab2-venv/bin/activate
-$ # Upgrade pip
-$ pip3 install --upgrade pip
-$ # Install libraries
-$ pip3 install grpcio
-$ # Install other gRPC tools after successful execution of last step
-$ pip3 install grpcio-tools googleapis-common-protos
+# Create virtual environment for the lab.
+python3 -m venv lab2-venv
+# activate the environment
+source lab2-venv/bin/activate
+# Upgrade pip
+pip3 install --upgrade pip
+# Install libraries
+pip3 install grpcio
+# Install other gRPC tools after successful execution of last step
+pip3 install grpcio-tools googleapis-common-protos
 ```
 
 ### Writing _Calculator.proto_
@@ -25,7 +25,7 @@ $ pip3 install grpcio-tools googleapis-common-protos
 
 ### Generating _pb2_ files
 ```sh
-$ python3 -m grpc_tools.protoc -I./protos --python_out=. --grpc_python_out=. ./protos/calculator.proto
+python3 -m grpc_tools.protoc -I./protos --python_out=. --grpc_python_out=. ./protos/calculator.proto
 ```
 
 ### Next steps
@@ -34,18 +34,18 @@ $ python3 -m grpc_tools.protoc -I./protos --python_out=. --grpc_python_out=. ./p
 
 ### Running  program
 ```sh
-$ # In one terminal window start the server
-$ python3 calculator_server.py
-$ # In another terminal window start client
-$ python3 calculator_client.py
+# In one terminal window start the server
+python3 calculator_server.py
+# In another terminal window start client
+python3 calculator_client.py
 ```
 
 ### Cleaning the system
 ```sh
-$ # Create "requirements.txt"
-$ pip3 freeze > requirements.txt
-$ # Deactivate the virtual Environment
-$ deactivate
-$ # Delete the environment
-$ rm -r lab2-venv
+# Create "requirements.txt"
+pip3 freeze > requirements.txt
+# Deactivate the virtual Environment
+deactivate
+# Delete the environment
+rm -r lab2-venv
 ```
